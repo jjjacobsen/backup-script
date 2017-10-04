@@ -37,11 +37,11 @@ while true; do
       case $hw in
         "home" ) echo "Backing up files, this will take a few minutes";
           sleep 3;
-          backup 10.0.0.69;
+          backup (static local ip);
           break;;
         "away" ) echo "Backing up files, this will take a few minutes";
           sleep 3;
-          backup 71.56.219.245;
+          backup (router ip);
           break;;
         * ) echo "Please answer home or away";
       esac
