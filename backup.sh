@@ -23,7 +23,7 @@ backup(){
   tar -cvpzf $dest/$filename $bal $brc $doc $pic "$windoc" "$winpic";
 
   # send data to pi
-  rsync -avzhe "ssh -p 4201" $dest/$filename jonah@$1:/media/backups;
+  rsync -avzhe "ssh -p (remote port number)" $dest/$filename jonah@$1:/media/backups;
 
   # delete file after sending
   rm $dest/$filename;
